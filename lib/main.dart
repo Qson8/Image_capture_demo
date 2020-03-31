@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:image_capture_demo/qs_home_model.dart';
 import 'package:image_capture_demo/qs_home_page.dart';
+import 'package:provider/provider.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,7 +12,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: QSHomePage(),
+      home: ChangeNotifierProvider<MineInviteModel>(
+        create: (context) => MineInviteModel(),
+        child: SafeArea(top: false, bottom: false, child: QSHomePage()),
+      ),
     );
   }
 }

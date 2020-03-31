@@ -76,7 +76,6 @@ class MineInviteLogic {
 
   /// 保存图片
   // 截屏图片生成图片流ByteData
-
   void saveImage() async {
     // 截屏
     ByteData byteData = await QSCommon.capturePngToByteData(

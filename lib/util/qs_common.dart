@@ -67,7 +67,6 @@ class QSCommon {
     String path = await ImagePickers.saveByteDataImageToGallery(sourceBytes);
     return File(path);
   }
-
 }
 
 

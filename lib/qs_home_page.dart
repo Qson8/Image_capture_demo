@@ -18,15 +18,16 @@ class _QSHomePageState extends State<QSHomePage> {
   @override
   Widget build(BuildContext context) {
     _config(context);
-    
+
     return Scaffold(
-      appBar: AppBar(title:Text('图片截取并保持相册')),
+      appBar: AppBar(title: Text('图片截取并保持相册')),
       body: _bodyWidget(),
+      backgroundColor: Color(0xfff1f1f1),
     );
   }
 
   _config(BuildContext context) {
-    size = YBSise(context,width: 360,height: 780);
+    size = YBSise(context, width: 360, height: 780);
     _model = Provider.of<MineInviteModel>(context)..setContext(context);
   }
 
@@ -78,6 +79,12 @@ class _QSHomePageState extends State<QSHomePage> {
             height: 5,
           ),
           _bottomWidget(),
+          Container(
+            padding: EdgeInsets.only(top:30),
+            child: Center(
+              child: Text('By Qson',style: TextStyle(color: Colors.white),),
+            ),
+          ),
         ],
       ),
       decoration: BoxDecoration(
@@ -206,7 +213,7 @@ class _QSHomePageState extends State<QSHomePage> {
             onTap: () {
               // 复制
               Clipboard.setData(ClipboardData(text: inviteLink));
-              Fluttertoast.showToast(msg: '');
+              Fluttertoast.showToast(msg: '复制成功');
             },
             child: clipRRectWidget(
               circular: 22,
