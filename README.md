@@ -154,8 +154,8 @@ _middleWidget(Map data, {double width, double height, int index}) {
 
 本文demo地址：https://github.com/Qson8/Image_capture_demo.git
 
->微信公众号：Hi Flutter
-关注可了解Flutter开发及IT科技资讯。
+>微信公众号：西江悦
+
 问题或建议，请公众号留言。
 ![](http://img.520lee.com/FmckB4obGGl4NTOjn-WDoNu6GYbl)
 
